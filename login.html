@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="style.css">
+        <!--Flikity CSS-->
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+        <title>GIGIL</title>
+        <link rel="shortcut icon" type="image/x-icon" href="img/new/1234.png" />
+
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <!--<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-storage.js"></script>-->
+    </head>
+    <body style="overflow-x: hidden;">
+      <header>
+        <nav class="navbar navbar-expand-md navbar-dark navigation navbar-fixed-top blackback" style="margin-top: 0px;"><!--id="#myNav">-->
+            <div style="position: relative; margin-top: 0px; padding-bottom: 15px;">
+                <img src="img/new/1234.png" class="logo-dedault" alt="logo" style="position: absolute; top: 0px;"/>
+                <a href="index.html" class="navbar-brand text-white" style="margin-left: 55%;">
+                    <span class=" font-weight-bold">Godownmart<br>Indian Grocery<br>Industries Limited</span>
+                </a>
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#myNav" style="position: absolute; right: 0%; top: 0%;">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="myNav">
+                  <div style="height: 0;
+                              width: 683%;
+                              border-top: 150px solid rgb(224, 170, 1);
+                              border-left: 100px solid transparent;
+                              position:absolute;
+                              top:-7%;
+                              right:-712%;
+                              z-index: 2;">
+                  </div>
+                  <div style="height: 0;
+                                width: 680%;
+                                border-top: 146px solid #000000;
+                                border-left: 98px solid transparent;
+                                position:absolute;
+                                top:-7%;
+                                right:-712%;
+                                z-index: 2;">
+                                <div class="ml-auto font-weight-bold row" style="position: absolute; left: 2%; top: -135px;">
+                                  <div class="col-1 mr-4"><div style="content: url(img/new/Facebook.png); width: 30px;">
+                                  </div></div>
+                                  <div class="col-1 mr-4"><div  style="content: url(img/new/twitter.png); width: 30px;">
+                                  </div></div>
+                                  <div class="col-1 mr-4"><div  style="content: url(img/new/youtube.png); width: 35px; margin-top: 3px;">
+                                  </div></div>
+                                </div>
+                                <ul class="navbar-nav ml-auto font-weight-bold" style="position: absolute; right: 0%; top: -60px;">
+                                  <li class="nav-item"><a href="login.html" class="nav-link m-2 text-light"><h4>Login</h4></a></li>
+                                  <li class="nav-item"><a href="login.html" class="nav-link m-2 text-light"><h4>Join</h4></a></li>
+                                  <li class="nav-item">
+                                    <div class="dropdown">
+                                      <div class="container" onclick="myFunction(this)">
+                                      <p> </p>
+                                      <div class="bar1"></div>
+                                      <div class="bar2"></div>
+                                      <div class="bar3"></div>
+                                      </div>
+                                    </div>
+                                </li>
+                                </ul>
+                              </div>
+                  <div style="height: 0;
+                              width: 530%;
+                              border-top: 50px solid rgb(48, 43, 43);
+                              border-left: 40px solid transparent;
+                              position:absolute;
+                              top:-7%;
+                              right:-711%;
+                              z-index: 2;">
+                              <ul class="navbar-nav ml-auto font-weight-bold" style="position: absolute; right: 0%; top: -60px;">
+                                <li class="nav-item" style="position: absolute; left: -650%;">
+                                  <a href="about.html" class="nav-link m-2 text-light"><p>Our Relationship</p></a>
+                                </li>
+                                <li class="nav-item" style="position: absolute; left: -530%;">
+                                  <a href="contact.html" class="nav-link m-2 text-light"><p>Investors Portal</p></a>
+                                </li>
+                                <li class="nav-item" style="position: absolute; left: -410%;">
+                                  <a href="contact.html" class="nav-link m-2 text-light"><p>Retail Ecosystem</p></a>
+                                </li>
+                                <li class="nav-item" style="position: absolute; left: -290%;">
+                                  <a href="contact.html" class="nav-link m-2 text-light"><p>Notification</p></a>
+                                </li>
+                                <li class="nav-item mt-1"><a href="contact.html" class="nav-link m-2 text-light">
+                                  <img src="img/new/icons8-online-support-64 copy.png" width="20%" style="position: absolute; left: -15%;"/>
+                                  <p style="color: rgb(152, 26, 100);">8800663755</p></a></li>
+                                </li>
+                              </ul>
+                  </div>
+                </div>
+                <div class="dropdown-menu" id="drop-menu"></div>
+            </div>
+        </nav>
+      </header>
+
+      <section style="background:linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url(img/new/login-back.jpg) ;
+                      background-size: cover;
+                      width: 100%;">
+        <div class="row" style="padding-bottom: 10%; padding-top: 5%; padding-right: 2%; padding-left: 2%;">
+          <div class="col-4">
+            <h1 style="text-align: center; color: rgb(225, 225, 230); font-size: 300%; margin-top: 45%;">Welcome To GIGLE India<br>Community</h1>
+          </div>
+          <div class="col-8">
+            <div class="row">
+              <div class="col-4" style=" margin-right: 0%;">
+                <h2 style="text-align: center;
+                           background-color: rgba(224, 170, 1, 0.5);
+                           border-radius: 10px;
+                           color: rgb(14, 17, 30);
+                           padding-bottom: 2%;
+                           margin-top: 45%;">User Type</h2>
+                <h2 style="text-align: center;
+                            background-color: rgba(224, 170, 1, 0.5);
+                            border-radius: 10px;
+                            color: rgb(14, 17, 30);
+                            padding-bottom: 2%;
+                            margin-top: 35%;">User Id / Mail Id</h2>
+                <h2 style="text-align: center;
+                            background-color: rgba(224, 170, 1, 0.5);
+                            border-radius: 10px;
+                            color: rgb(14, 17, 30);
+                            padding-bottom: 2%;
+                            margin-top: 35%;">Password</h2>
+              </div>
+              <div class="col-8">
+                <div class="col-12" style="content: url(img/new/Black\ layer.png); margin-left: 0%;"></div>
+                <div style="position: absolute; top: 19.6%;
+                            margin-left: 10%;
+                            width: 75.5%;">
+                  <select id="role" name="role" style="width: 100%;
+                                                       background-color: rgb(150, 150, 150);
+                                                       color: rgb(225, 225, 230);
+                                                       padding-top: 1%;
+                                                       padding-bottom: 1%;
+                                                       border-radius: 10px;">
+                    <option value="none" class="text-muted">Select Role</option>
+                    <option value="Investors" class="text-muted">Inversor</option>
+                    <option value="Retailers" class="text-muted">Retailer</option>
+                    <option value="Supply Clain Logistic" class="text-muted">Supply Clain Logistic</option>
+                    <option value="Suppliers and Manufacturers" class="text-muted">Supplier or Manufacturer</option>
+                  </select>
+                  <input style="width: 100%;
+                                background-color: rgb(150, 150, 150);
+                                color: rgb(50,50,50);
+                                padding-top: 1%;
+                                padding-bottom: 1%;
+                                border-radius: 10px;
+                                margin-top: 22.5%;
+                                font-weight: bold;" type="email" name="email" required="" id="login-email">
+                  <input style="width: 100%;
+                                background-color: rgb(150, 150, 150);
+                                color: rgb(50,50,50);
+                                padding-top: 1%;
+                                padding-bottom: 1%;
+                                border-radius: 10px;
+                                margin-top: 22.5%;
+                                font-weight: bold;" type="password" name="password" required="" id="login-password">
+                  <div class="mt-4">
+                    <a href="#"><p style="color: rgb(225, 225, 230); position: absolute;">Create new account</p></a>
+                    <a href="#"><p style="color: rgb(225, 225, 230); text-align: right;">Forget Password?</p></a>
+                  </div>
+                  <button type="button" class="y-btn" onclick="login()" style="margin-right: 25%; text-align: center; width: 45%;">
+                    <h3 class="btn-txt">LogIn</h3>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+        <!--<section>
+          <div class="col-12" style="margin:0;padding:0;font-family: sans-serif;background: linear-gradient(#141e30, #243b55);padding-bottom: 50px;">
+            <div class="row">
+              <div class="col-sm-12 col-md-6 col-lg-4 m-5">
+                  <div class="login-box">
+                <h2>Login</h2>
+                <form>
+                    <div class="user-box">
+                    <input type="email" name="email" required="" id="login-email">
+                    <label>Email</label>
+                    </div>
+                    <div class="user-box">
+                    <input type="password" name="password" required="" id="login-password">
+                    <label>Password</label>
+                    </div>
+                    <div class="user-box"><p class="text-light" id="demo" onclick="myFunction()">Forgot Password</p></div>
+                    <a href="#">
+                      <button class="login-button" onclick="login()" type="button">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      submit</button>
+                      </a>
+                </form>
+            </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-7 login-box mt-5">
+                <h2>Register</h2>
+                <form>
+                    <div class="user-box">
+                      <input type="text" name="" required="" id="name">
+                      <label>Name</label>
+                    </div>
+                    <div class="user-box">
+                      <input type="email"  name="" required="" id="r-email">
+                      <label>Email Address</label>
+                    </div>
+                    <button  onclick="sendEmail()">Get OTP</button>
+                    <div class="user-box mt-3">
+                      <input type="OTP" name="" required="" id="otp">
+                      <label>OTP</label>
+                    </div>
+                    <div class="user-box">
+                      <select id="role" name="role">
+                        <option value="none" class="text-muted">Select Role</option>
+                        <option value="Investors" class="text-muted">Inversor</option>
+                        <option value="Retailers" class="text-muted">Retailer</option>
+                        <option value="Supply Clain Logistic" class="text-muted">Supply Clain Logistic</option>
+                        <option value="Suppliers and Manufacturers" class="text-muted">Supplier or Manufacturer</option>
+                      </select>
+                    </div>
+                    <div class="user-box">
+                      <input type="password" name="" required="" id="r-password">
+                      <label>Password</label>
+                    </div>
+                    <div class="user-box">
+                      <input type="password" name="" required="" id="r-cpassword">
+                      <label>Confirm Password</label>
+                    </div>
+                    <a href="#">
+                    <button class="login-button" onclick="register()" type="button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Register</button>
+                    </a>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>-->
+
+        <footer>
+            <div>
+              <div class="container col-md-12 mt-5">
+                <div class="row">
+                  <div class="col-sm-3 col-md-3 col-lg-3 mt-5">
+                    <h6 class="text-light font-weight-light">About</h6>
+                    <p class="text-muted">Keep if required</p>
+                  </div>
+                  <!-- End of .col-sm-3 -->
+                  <div class="col-sm-3 col-md-3 col-lg-3 mt-5">
+                    <ul>
+                      <li class="navbar-nav ml-auto"><h5 class="text-light font-weight-light">Our Services</h3></li>
+                      <li class="navbar-nav ml-auto"><a href="#" class="text-muted">Graphic Design</a></li>
+                      <li class="navbar-nav ml-auto"><a href="#" class="text-muted">Web Design</a></li>
+                      <li class="navbar-nav ml-auto"><a href="#" class="text-muted">Web Development</a></li>
+                    </ul>
+                  </div>
+                  <!-- End of .col-sm-3 -->
+          
+                  <div class="col-sm-3 col-md-3 col-lg-3 mt-5">
+                    <ul>
+                      <li class="navbar-nav ml-auto"><h5 class="text-light font-weight-light">Quick Links</h3></li>
+                      <li class="navbar-nav ml-auto"><a href="#" class="text-muted">Partners</a></li>
+                      <li class="navbar-nav ml-auto"><a href="#" class="text-muted">About</a></li>
+                      <li class="navbar-nav ml-auto"><a href="#" class="text-muted">FAQ’s</a></li>
+                      <li class="navbar-nav ml-auto"><a href="#" class="text-muted">Badges</a></li>
+                    </ul>
+                  </div>
+                  <!-- End of .col-sm-3 -->
+          
+                  <div class="col-sm-3 col-md-3 col-lg-3 mt-5">
+                    <ul>
+                      <li class="navbar-nav ml-auto"><h5 class="text-light font-weight-light">Connect with us Socially</h3></li>
+                      <li class="navbar-nav ml-auto"><a href="#" class="text-muted">Facebook</a></li>
+                      <li class="navbar-nav ml-auto"><a href="#" class="text-muted">Twitter</a></li>
+                      <li class="navbar-nav ml-auto"><a href="#" class="text-muted">Youtube</a></li>
+                      <li class="navbar-nav ml-auto"><a href="#" class="text-muted mb-4">Pinterest</a></li>
+                    </ul>
+                  </div>
+                  <!-- End of .col-sm-3 -->
+          
+                </div>
+              </div> <!-- end container -->
+            </div>
+        </footer>
+
+        <!-- Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <!-- JavaScript -->
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-storage.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+        <script src="js/script.js"></script>
+        <script>
+          firebase.auth().onAuthStateChanged(function(user){
+            if(user)
+            {
+              window.location.href = "registered.html";
+            }
+          });
+        </script>
+        <script>
+          var menu_status = "false";
+          document.getElementById("drop-menu").style.display = "none";
+          function myFunction(x) {
+              x.classList.toggle("change");
+              if(menu_status.trim() === "true".trim()){
+                  document.getElementById("drop-menu").style.display = "none";
+                  menu_status = "false";
+              }
+              else{
+                  document.getElementById("drop-menu").style.display = "block";
+                  menu_status = "true";
+              }
+          }
+        </script>
+    </body>
+</html>
