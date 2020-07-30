@@ -33,6 +33,122 @@ body{
     padding:0;
 }
 
+.submenu{}
+
+.menu-content{
+    display: none;
+}
+
+.submenu:hover .menu-content{
+    display: block;
+}
+
+.cote{
+    height: auto;
+    transform: scaleY(0);    
+    transform-origin: top;
+    transition: transform 0.5s ease;
+}
+.cote-y{
+    transform: scaleY(0);    
+    transform-origin: top;
+    transition: transform 0.5s ease;
+}
+
+.cote-y:hover{
+    transform: scaleY(1);
+}
+
+.cote-y:hover .cote{
+    transform: scaleY(1);
+}
+
+@media screen and ( max-width: 767px ) {
+    .menu-content{
+        display: none;
+    }
+    .keyval-ml{
+        margin-left: 0%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .menu-content{
+        display: block;
+    }
+    .keyval-ml{
+        margin-left: 11%;
+    }
+}
+
+.keyval-ml{
+    margin-left: 11%;
+}
+
+.keyval-col{
+    display: block;
+}
+
+@media screen and ( max-width: 991px ) {
+    .keyval-ml{
+        margin-left: 0%;
+    }
+    .keyval-col{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .keyval-ml{
+        margin-left: 11%;
+    }
+    .keyval-col{
+        display: block;
+    }
+}
+
+.img-zoom{
+    width: 90%; 
+    padding-top: 90%;
+    margin: 10%;
+}
+
+.img-zoom:hover{
+    width: 100%; 
+    padding-top: 100%;
+    margin: 0%;
+}
+
+.blink {
+    -webkit-animation: 2s linear infinite condemned_blink_effect; /* for Safari 4.0 - 8.0 */
+    animation: 2s linear infinite condemned_blink_effect;
+  }
+  
+/* for Safari 4.0 - 8.0 */
+@-webkit-keyframes condemned_blink_effect { 
+    0% {
+        visibility: hidden;
+    }
+    50% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: visible;
+    }
+}
+
+@keyframes condemned_blink_effect {
+    0% {
+        visibility: hidden;
+    }
+    50% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: visible;
+    }
+}
+
 /*.slider{
     position: relative;
     width: 500%;
@@ -92,14 +208,6 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     width: 73%;
-}
-
-.contact{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
 }
 
 footer{
