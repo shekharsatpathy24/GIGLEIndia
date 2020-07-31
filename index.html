@@ -26,25 +26,20 @@
                 height: 100vh;
                 background-size: cover;
                 width: 100%;">
-          <nav class="navbar navbar-expand-md navbar-dark navigation navbar-fixed-top blackback" style="margin-top: 0px; height: 120px;"><!--id="#myNav">-->
-            <div style="position: relative; margin-top: 0px; padding-bottom: 15px; width: 30%;">
-                <a href="index.html">
-                <div class="row">
-                  <div class="col-3" style="margin-right: 0%; background-image: url(img/new/1234-2.png); background-size: cover;">
-                    <!--<div class="col-12" style="content: url(img/new/1234.png); margin-top: 0.5vw;"></div>-->
-                  </div>
-                  <div class="col-8">
-                    <h2 style="font-size: 1.4vw; width: 65%; color: rgb(225, 225, 230); margin-top: 3%;">
-                      Godownmart Indian Grocery Industries Limited
-                    </h2>
-                  </div>
-                </div>
+          <nav class="navbar navbar-expand-md navbar-dark navigation navbar-fixed-top blackback" style="margin-top: 0px; height: 120px; background-color: #000000;">
+            <div style="position: relative; margin-top: 0px; padding-bottom: 15px; width: 30%; height: 100%;">
+              <a href="index.html">
+                <img src="img/new/1234-2.png" class="ml-1"/>
+                <h5 style="width: 65%; color: rgb(225, 225, 230); margin-top: -82px; margin-left: 100px; width: 170px;">
+                  Godownmart Indian Grocery Industries Limited
+                </h5>
               </a>
             </div>
             <div class="row" style="position: absolute; right: 0%; bottom: 0%;">
-              <div class="col-4"><a href="login.html" class="nav-link m-2 text-light"><p>Login</p></a></div>
-              <div class="col-4"><a href="login.html" class="nav-link m-2 text-light"><p>Join</p></a></div>
-              <div class="col-4">
+              <div class="col-5"></div>
+              <div class="col-2"><a href="login.html" class="nav-link m-2 text-light"><p>Login</p></a></div>
+              <div class="col-2"><a href="login.html" class="nav-link m-2 text-light"><p>Join</p></a></div>
+              <div class="col-2">
                 <div class="dropdown">
                   <div class="container" onclick="myFunction(this)">
                   <p> </p>
@@ -54,8 +49,9 @@
                   </div>
                 </div>
               </div>
+              <div class="col-1"></div>
             </div>
-            <div class="collapse navbar-collapse" id="myNav">
+            <div class="float-nav">
               <div style="height: 0;
                           width: 80%;
                           border-top: 150px solid rgb(224, 170, 1);
@@ -132,8 +128,8 @@
             <div class="row mt-4">
               <div class="col-sm-12 col-md-6 col-lg-4">
                 <div class="submenu">
-                  <h3 class="ml-4">ABOUT US ></h3>
-                  <ul class="menu-content">
+                  <h3 class="ml-4" onclick="about()">ABOUT US ></h3>
+                  <ul class="menu-content" id="about-content">
                     <li class="navbar-nav"><a href="#" class="menu-text">Company Overview</a></li>
                     <li class="navbar-nav"><a href="#" class="menu-text">Community</a></li>
                     <li class="navbar-nav"><a href="#" class="menu-text">GODOWNMART - The Way Forward</a></li>
@@ -144,8 +140,8 @@
                   </ul>
                 </div>
                 <div class="submenu">
-                  <h3 class="ml-4 mt-4">OTHER ></h3>
-                  <ul class="menu-content">
+                  <h3 class="ml-4 mt-4" onclick="other()">OTHER ></h3>
+                  <ul class="menu-content" id="other-content">
                     <li class="navbar-nav"><a href="#" class="menu-text">Client Feedback</a></li>
                     <li class="navbar-nav"><a href="#" class="menu-text">Mentors & Advisors</a></li>
                     <li class="navbar-nav"><a href="#" class="menu-text">Media</a></li>
@@ -155,8 +151,8 @@
               </div>
               <div class="col-sm-12 col-md-6 col-lg-4 mt-4">
                 <div class="submenu">
-                  <h3 class="ml-4">SERVICES ></h3>
-                  <ul class="menu-content">
+                  <h3 class="ml-4" onclick="service()">SERVICES ></h3>
+                  <ul class="menu-content" id="service-content">
                     <li class="navbar-nav"><a href="#" class="menu-text">Brand</a></li>
                     <li class="navbar-nav"><a href="#" class="menu-text">Smart Store</a></li>
                     <li class="navbar-nav"><a href="#" class="menu-text">CMS - Centralized Managment System</a></li>
@@ -165,8 +161,8 @@
                   </ul>
                 </div>
                 <div class="submenu">
-                  <h3 class="ml-4 mt-4">PORTAL SERVICES ></h3>
-                  <ul class="menu-content">
+                  <h3 class="ml-4 mt-4" onclick="portal()">PORTAL SERVICES ></h3>
+                  <ul class="menu-content" id="portal-content">
                     <li class="navbar-nav"><a href="#" class="menu-text">Our Presence - Find Stores</a></li>
                     <li class="navbar-nav"><a href="#" class="menu-text">Suppliers / Manufacturer's INFO</a></li>
                     <li class="navbar-nav"><a href="#" class="menu-text">Retailers Verification Process</a></li>
@@ -175,8 +171,8 @@
               </div>
               <div class="col-sm-12 col-md-6 col-lg-4 mt-4">
                 <div class="submenu">
-                  <h3 class="ml-4">DEPARTMENTS ></h3>
-                  <ul class="menu-content">
+                  <h3 class="ml-4" onclick="dept()">DEPARTMENTS ></h3>
+                  <ul class="menu-content" id="dept-content">
                     <li class="navbar-nav"><a href="#" class="menu-text">Product Supply</a></li>
                     <li class="navbar-nav"><a href="#" class="menu-text">Pricing (Product)</a></li>
                     <li class="navbar-nav"><a href="#" class="menu-text">Retail Technology & Development</a></li>
@@ -194,7 +190,7 @@
         <section>
           <div class="row">
             <div class="col-md-6 col-sm-12 col-xs-12" style=" background-color: rgb(14, 17, 30);">
-              <div style="width: 20%; height: 36%; background-color: rgb(224, 170, 1); position: absolute; top: 0px; left: 10%;" data-aos="zoom-in">
+              <div style="width: 20%; height: 235px /*36%*/; background-color: rgb(224, 170, 1); position: absolute; top: 0px; left: 10%;" data-aos="zoom-in">
                 <div class="col-12" style="content: url(img/new/Untitled-4-1.png);"></div>
               </div>
               <h1 style="text-align: right; color: rgb(182, 138, 1); font-size: 190%; margin-left: 30%; margin-right: 23%;" 
@@ -475,16 +471,6 @@
 
         <section style="background-color: rgb(225, 225, 230); padding-top: 1%; padding-bottom: 1%;">
           <div class="row">
-            <div class="col-md-12 col-sm-12 col-lg-4">
-              <div class="row">
-                <div class="12">
-                  <div class="col-11" style="content: url(img/new/Untitled-1.png);" data-aos="zoom-in" data-aos-duration="1000"></div>
-                </div>
-                <div class="12">
-                  <div class="col-11" style="content: url(img/new/Untitled-1.png);" data-aos="zoom-in" data-aos-duration="1000"></div>
-                </div>
-              </div>
-            </div>
             <div class="col-md-12 col-sm-12 col-lg-8">
               <h1 style="text-align: center; color: rgb(14, 17, 30); padding-top: 2%">FROM OUR ADVISOR & MENTORS</h1>
               <h2 style="text-align: center; color: rgb(150, 150, 150); padding-top: 2%" >We've been creating<br> Awesome Since 2016</h2>
@@ -506,6 +492,16 @@
                 </div>
                 <div class="col-md-6 col-sm-6 col-lg-4" style="margin-top: 4%;">
                   <div class="col-12" style="content: url(img/new/Untitled-1.png);" data-aos="zoom-in" data-aos-duration="1000"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-lg-4">
+              <div class="row">
+                <div class="12">
+                  <div class="col-11" style="content: url(img/new/Untitled-1.png);" data-aos="zoom-in" data-aos-duration="1000"></div>
+                </div>
+                <div class="12">
+                  <div class="col-11" style="content: url(img/new/Untitled-1.png);" data-aos="zoom-in" data-aos-duration="1000"></div>
                 </div>
               </div>
             </div>
@@ -642,6 +638,11 @@
         </script>
         <script>
           var menu_status = "false";
+          var about_status = "false";
+          var other_status = "false";
+          var dept_status = "false";
+          var service_status = "false";
+          var portal_status = "false";
           document.getElementById("drop-menu").style.display = "none";
           function myFunction(x) {
               x.classList.toggle("change");
@@ -652,6 +653,66 @@
               else{
                   document.getElementById("drop-menu").style.display = "block";
                   menu_status = "true";
+              }
+          }
+          function about(){
+              if (window.matchMedia("(max-width: 767px)").matches) {
+                if(about_status.trim() === "true".trim()){
+                    document.getElementById("about-content").style.display = "none";
+                    about_status = "false";
+                }
+                else{
+                    document.getElementById("about-content").style.display = "block";
+                    about_status = "true";
+                }
+              }
+          }
+          function other(){
+              if (window.matchMedia("(max-width: 767px)").matches) {
+                if(other_status.trim() === "true".trim()){
+                    document.getElementById("other-content").style.display = "none";
+                    other_status = "false";
+                }
+                else{
+                    document.getElementById("other-content").style.display = "block";
+                    other_status = "true";
+                }
+              }
+          }
+          function dept(){
+              if (window.matchMedia("(max-width: 767px)").matches) {
+                if(dept_status.trim() === "true".trim()){
+                    document.getElementById("dept-content").style.display = "none";
+                    dept_status = "false";
+                }
+                else{
+                    document.getElementById("dept-content").style.display = "block";
+                    dept_status = "true";
+                }
+              }
+          }
+          function service(){
+              if (window.matchMedia("(max-width: 767px)").matches) {
+                if(service_status.trim() === "true".trim()){
+                    document.getElementById("service-content").style.display = "none";
+                    service_status = "false";
+                }
+                else{
+                    document.getElementById("service-content").style.display = "block";
+                    service_status = "true";
+                }
+              }
+          }
+          function portal(){
+              if (window.matchMedia("(max-width: 767px)").matches) {
+                if(portal_status.trim() === "true".trim()){
+                    document.getElementById("portal-content").style.display = "none";
+                    portal_status = "false";
+                }
+                else{
+                    document.getElementById("portal-content").style.display = "block";
+                    portal_status = "true";
+                }
               }
           }
         </script>
