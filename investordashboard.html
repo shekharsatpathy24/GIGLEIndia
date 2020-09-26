@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="style.css">
+        <!--Flikity CSS-->
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+        <title>GIGIL</title>
+        <link rel="shortcut icon" type="image/x-icon" href="img/new/1234.png" />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <!--<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-storage.js"></script>-->
+		<style>
+* {
+  box-sizing: border-box;
+}
+		
+input[type=text], select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+input[type=number], select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+input[type=submit] {
+  background-color: #E47800;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;	
+  margin-left: 15px;
+}
+
+input[type=submit]:hover {
+  background-color: #B35E00;
+}
+input[type=reset] {
+  background-color: #E47800;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;	
+}
+
+input[type=reset]:hover {
+  background-color: #B35E00;
+}
+
+.container3 {
+  border-radius: 5px;
+  padding: 20px;
+}
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media screen and (max-width: 600px) {
+  .col-25, .col-75{
+    width: 100%;
+    margin-top: 0;
+  }
+}
+	@media screen and (max-width: 600px) {
+  input[type=submit] {
+    width: 40%;
+    margin-top: 15px;
+	margin-left:70px;
+  }
+}
+@media screen and (min-width: 600px) {
+  input[type=submit] {
+    margin-top: 15px;
+  }
+}
+@media screen and (max-width: 600px) {
+  input[type=reset] {
+    width: 40%;
+    margin-top: 15px;
+	margin-left:0;
+  }
+}
+@media screen and (min-width: 600px) {
+  input[type=reset] {
+    margin-top: 15px;
+	margin-left:47%;
+  }
+}
+@media screen and (min-width: 600px) {
+  input[type=text],select {
+    width: 50%
+  }
+}
+@media screen and (min-width: 600px) {
+  input[type=number] {
+    width: 50%
+  }
+}
+
+.container1 {
+	
+  margin-left: 50px;
+	margin-right: 50px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+	
+}
+	body {font-family: 'Open Sans', sans-serif;
+			color: white;}
+	
+	.tab {
+		
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #EDC018;
+		}
+			.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+			.tab button:hover {
+  background-color: #EBE14E;
+			}
+			.tab button.active {
+  background-color: #E47800;
+			}
+			.tabcontent {
+				
+	min-height: 500px;
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+		}
+
+		</style>
+    </head>
+    <body style="overflow-x: hidden; background-color:#211E1E;">
+      <header>
+        <nav class="navbar navbar-expand-md navbar-dark navigation navbar-fixed-top blackback" style="margin-top: 0px; height: 120px; background-color: #000000;">
+            <div style="position: relative; margin-top: 0px; padding-bottom: 15px; width: 30%; height: 100%;">
+              <a href="index.html">
+                <img src="img/new/1234.png" class="ml-1"/>
+                <h5 style="width: 65%; color: rgb(225, 225, 230); margin-top: -82px; margin-left: 100px; width: 170px; font-family: 'PT Sans', sans-serif;">
+                  Godownmart Indian Grocery Industries Limited
+                </h5>
+              </a>
+            </div>
+            <div class="row" style="position: absolute; right: 0%; bottom: 0%; ">
+              <div class="col-5"></div>
+              <div class="col-2"><a href="login.html" class="nav-link m-2 text-light" ><p>Login</p></a></div>
+              <div class="col-2"><a href="login.html" class="nav-link m-2 text-light"><p>Join</p></a></div>
+              <div class="col-2">
+                <div class="dropdown">
+                  <div class="container" onclick="myFunction(this)">
+                  <p> </p>
+                  <div class="bar1"></div>
+                  <div class="bar2"></div>
+                  <div class="bar3"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-1"></div>
+            </div>
+            <div class="float-nav">
+              <div style="height: 0;
+                          width: 80%;
+                          border-top: 150px solid rgb(224, 170, 1);
+                          border-left: 100px solid transparent;
+                          position:absolute;
+                          top:-7%;
+                          right:0%;
+                          z-index: 2;">
+              </div>
+              <div style="height: 0;
+                          width: 79.6%;
+                          border-top: 146px solid #000000;
+                          border-left: 98px solid transparent;
+                          position:absolute;
+                          top:-7%;
+                          right: 0%;
+                          z-index: 2;">
+                          <div class="ml-auto font-weight-bold row" style="position: absolute; left: 1vw; top: -135px;">
+                            <div class="col-1" style="margin-right: 1.5vw;"><div style="content: url(img/new/Facebook.png); width: 2.25vw;">
+                            </div></div>
+                            <div class="col-1" style="margin-right: 1.5vw;"><div  style="content: url(img/new/twitter.png); width: 2.25vw;">
+                            </div></div>
+                            <div class="col-1" style="margin-right: 1.5vw;"><div  style="content: url(img/new/youtube.png); width: 2.25vw; margin-top: 3px;">
+                            </div></div>
+                          </div>
+                          <ul class="navbar-nav ml-auto font-weight-bold" style="position: absolute; right: 0%; top: -60px;">
+                            <li class="nav-item"><a href="login.html" class="nav-link m-2 text-light"><h4>Login</h4></a></li>
+                            <li class="nav-item"><a href="login.html" class="nav-link m-2 text-light"><h4>Join</h4></a></li>
+                            <li class="nav-item">
+                              <div class="dropdown">
+                                <div class="container" onclick="myFunction(this)">
+                                <p> </p>
+                                <div class="bar1"></div>
+                                <div class="bar2"></div>
+                                <div class="bar3"></div>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+              <div style="height: 0;
+                          width: 60%;
+                          border-top: 50px solid rgb(48, 43, 43);
+                          border-left: 40px solid transparent;
+                          position:absolute;
+                          top:-7%;
+                          right:0%;
+                          z-index: 2;">
+                <div class="navbar-nav ml-auto font-weight-bold" style="position: absolute; left: 0%; top: -7vh;">
+                  <a href="about.html" class="nav-link m-2 text-light"><p style="font-size: 1vw;">Our Relationship</p></a>
+                  <a href="contact.html" class="nav-link m-2 text-light"><p style="font-size: 1vw;">Investors Portal</p></a>
+                  <a href="contact.html" class="nav-link m-2 text-light"><p style="font-size: 1vw;">Retail Ecosystem</p></a>
+                  <a href="contact.html" class="nav-link m-2 text-light"><p style="font-size: 1vw;">Notification</p></a>
+                </div>
+                <div class="navbar-nav ml-auto font-weight-bold" style="position: absolute; right: 1%; top: -5vh;">
+                  <a href="contact.html" class="nav-link m-2 text-light"></a>
+                    <div class="row mt-1">                                  
+                      <!--<img src="img/new/icons8-online-support-64 copy.png" width="3%" style="position: absolute; left: 84%;"/>-->
+                      <div class="col-4">
+                        <div class="col-11 blink" style="content: url(img/new/icons8-online-support-64\ copy.png);
+                                                    position: absolute; right: -35%;"></div>
+                      </div>
+                      <div class="col-3">
+                        <p style="color: rgb(152, 26, 100); font-size: 1vw;">8800663755</p>
+                      </div>
+                      <div class="col-5"></div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </nav>
+          <div class="dropdown-menu" id="drop-menu">
+            <div class="row mt-4">
+              <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="submenu">
+                  <h3 class="ml-4" onclick="about()">ABOUT US ></h3>
+                  <ul class="menu-content" id="about-content">
+                    <li class="navbar-nav"><a href="#" class="menu-text">Company Overview</a></li>
+                    <li class="navbar-nav"><a href="#" class="menu-text">Community</a></li>
+                    <li class="navbar-nav"><a href="#" class="menu-text">GODOWNMART - The Way Forward</a></li>
+                    <li class="navbar-nav"><a href="#" class="menu-text">Investors RelationshipOur Relationship</a></li>
+                    <li class="navbar-nav"><a href="#" class="menu-text">Our Relationship</a></li>
+                    <li class="navbar-nav"><a href="#" class="menu-text">Award</a></li>
+                    <li class="navbar-nav"><a href="#" class="menu-text">Partnership</a></li>
+                  </ul>
+                </div>
+                <div class="submenu">
+                  <h3 class="ml-4 mt-4" onclick="other()">OTHER ></h3>
+                  <ul class="menu-content" id="other-content">
+                    <li class="navbar-nav"><a href="#" class="menu-text">Client Feedback</a></li>
+                    <li class="navbar-nav"><a href="#" class="menu-text">Mentors & Advisors</a></li>
+                    <li class="navbar-nav"><a href="#" class="menu-text">Media</a></li>
+                    <li class="navbar-nav"><a href="#" class="menu-text">Our Team</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-4 mt-4">
+                <div class="submenu">
+                  <h3 class="ml-4" onclick="service()">SERVICES ></h3>
+                  <ul class="menu-content" id="service-content">
+                    <li class="navbar-nav"><a href="#" class="menu-text">Brand</a></li>
+                    <li class="navbar-nav"><a href="#" class="menu-text">Smart Store</a></li>
+                    <li class="navbar-nav"><a href="#" class="menu-text">CMS - Centralized Managment System</a></li>
+                    <li class="navbar-nav"><a href="#" class="menu-text">Smart - RM (Revenue Management)</a></li>
+                    <li class="navbar-nav"><a href="#" class="menu-text">Features</a></li>
+                  </ul>
+                </div>
+                <div class="submenu">
+                  <h3 class="ml-4 mt-4" onclick="portal()">PORTAL SERVICES ></h3>
+                  <ul class="menu-content" id="portal-content">
+                    <li class="navbar-nav"><a href="#" class="menu-text">Our Presence - Find Stores</a></li>
+                    <li class="navbar-nav"><a href="#" class="menu-text">Suppliers / Manufacturer's INFO</a></li>
+                    <li class="navbar-nav"><a href="#" class="menu-text">Retailers Verification Process</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-4 mt-4">
+                <div class="submenu">
+                  <h3 class="ml-4" onclick="dept()">DEPARTMENTS ></h3>
+                  <ul class="menu-content" id="dept-content">
+                    <li class="navbar-nav"><a href="#" class="menu-text">Product Supply</a></li>
+                    <li class="navbar-nav"><a href="#" class="menu-text">Pricing (Product)</a></li>
+                    <li class="navbar-nav"><a href="#" class="menu-text">Retail Technology & Development</a></li>
+                    <li class="navbar-nav"><a href="#" class="menu-text">Quality Control</a></li>
+                    <li class="navbar-nav"><a href="#" class="menu-text">Training & Skill Development</a></li>
+                    <li class="navbar-nav"><a href="#" class="menu-text">Retail Research & Development (RRD)</a></li>
+                    <li class="navbar-nav"><a href="#" class="menu-text">Funding</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+	<h3 style="font-family:'black-ops-one'; color:rgb(182, 138, 1); margin-left: 5px;">Dashboard For Supplier</h3>
+	
+	<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'info')" id="defaultOpen">Information</button>
+  <button class="tablinks" onclick="openCity(event, 'busi')">Business</button>
+</div>
+
+<div id="info" class="tabcontent">
+  <h2>User Details</h2><br>
+  <p>Full Name: </p>
+  <p>Sex:</p>
+  <p>Date of Birth: </p>
+  <p>Address: </p>
+	<p>E-Mail: </p>
+	<p>Contact: </p>
+	<p>Identitification Type:</p>
+	<p>Identitification Card Number:</p>
+	<p>Venture Name: </p>
+	<p>Business Continuity:</p>
+	<p>Store in Size:</p>
+	<p>Monthly Revenue:</p>
+	<p>Annual Revenue:</p>
+	<p>No of Customer:</p>
+	<p>Photo Copy of Venture:</p>
+	<p>GST/Trade License/Pan:</p>
+	<p></p>
+</div>
+
+
+<div id="busi" class="tabcontent">
+  <h2>Business Details From</h2>
+  <div class="container3">
+	<form action="">
+    <div class="row">
+      <div class="col-25">
+    <label for="monrev">Monthly Revenue</label>
+	</div>
+      <div class="col-75">
+    <input type="number" id="monrev" name="Monthly Revenue" placeholder="Enter your Monthly Revenue" required>
+    </div>
+    </div>
+	<div class="row">
+      <div class="col-25">
+    <label for="todayrev">Today Revenue</label>
+	</div>
+      <div class="col-75">
+    <input type="number" id="todrev" name="Today Revenue" placeholder="Enter your Daily Revenue" required>
+    </div>
+    </div>
+	<div class="row">
+      <div class="col-25">
+    <label for="nostore">No of Store</label>
+	</div>
+      <div class="col-75">
+    <input type="number" id="nostore" name="No of Store" placeholder="Enter your No of Store" required>
+    </div>
+    </div>
+	<div class="row">
+      <div class="col-25">
+    <label for="totalinv">Total Investment</label>
+	</div>
+      <div class="col-75">
+    <input type="number" id="totalinv" name="Total Investment" placeholder="Enter your Total Investment" required>
+    </div>
+    </div>
+	<div class="row">
+      <div class="col-25">
+    <label for="noret">No of Retailer</label>
+	</div>
+      <div class="col-75">
+    <input type="number" id="noret" name="No of Retailer" placeholder="Enter your No of Retailer" required>
+    </div>
+    </div>
+	<div class="row">
+      <div class="col-25">
+    <label for="nosup">No of Supplier</label>
+	</div>
+      <div class="col-75">
+    <input type="number" id="nosup" name="No of Supplier" placeholder="Enter your No of Supplier" required>
+    </div>
+    </div>
+	<div class="row">
+      <div class="col-25">
+    <label for="noman">No of Manufacturer</label>
+	</div>
+      <div class="col-75">
+    <input type="number" id="noman" name="No of Manufacturer" placeholder="Enter your No of Manufacturer" required>
+    </div>
+    </div>
+	<div class="row">
+      <div class="col-25">
+    <label for="nocon">No of Consumer</label>
+	</div>
+      <div class="col-75">
+    <input type="number" id="nocon" name="No of Consumer" placeholder="Enter your No of Consumer" required>
+    </div>
+    </div>
+	
+    <div class="row">
+	<input type="reset" value="Reset">
+    <input type="submit"  value="Submit">
+	</div>
+  </form>
+	</div>
+</div> 
+
+      
+        <footer>
+            <div>
+              <div class="container col-md-12 mt-5">
+                <div class="row">
+                  <div class="col-sm-3 col-md-3 col-lg-3 mt-5">
+                    <h6 class="text-light font-weight-light">About</h6>
+                    <p class="text-muted">Keep if required</p>
+                  </div>
+                  <!-- End of .col-sm-3 -->
+                  <div class="col-sm-3 col-md-3 col-lg-3 mt-5">
+                    <ul>
+                      <li class="navbar-nav ml-auto"><h5 class="text-light font-weight-light">Our Services</h3></li>
+                      <li class="navbar-nav ml-auto"><a href="#" class="text-muted">Graphic Design</a></li>
+                      <li class="navbar-nav ml-auto"><a href="#" class="text-muted">Web Design</a></li>
+                      <li class="navbar-nav ml-auto"><a href="#" class="text-muted">Web Development</a></li>
+                    </ul>
+                  </div>
+                  <!-- End of .col-sm-3 -->
+          
+                  <div class="col-sm-3 col-md-3 col-lg-3 mt-5">
+                    <ul>
+                      <li class="navbar-nav ml-auto"><h5 class="text-light font-weight-light">Quick Links</h3></li>
+                      <li class="navbar-nav ml-auto"><a href="#" class="text-muted">Partners</a></li>
+                      <li class="navbar-nav ml-auto"><a href="#" class="text-muted">About</a></li>
+                      <li class="navbar-nav ml-auto"><a href="#" class="text-muted">FAQ’s</a></li>
+                      <li class="navbar-nav ml-auto"><a href="#" class="text-muted">Badges</a></li>
+                    </ul>
+                  </div>
+                  <!-- End of .col-sm-3 -->
+          
+                  <div class="col-sm-3 col-md-3 col-lg-3 mt-5">
+                    <ul>
+                      <li class="navbar-nav ml-auto"><h5 class="text-light font-weight-light">Connect with us Socially</h3></li>
+                      <li class="navbar-nav ml-auto"><a href="#" class="text-muted">Facebook</a></li>
+                      <li class="navbar-nav ml-auto"><a href="#" class="text-muted">Twitter</a></li>
+                      <li class="navbar-nav ml-auto"><a href="#" class="text-muted">Youtube</a></li>
+                      <li class="navbar-nav ml-auto"><a href="#" class="text-muted mb-4">Pinterest</a></li>
+                    </ul>
+                  </div>
+                  <!-- End of .col-sm-3 -->
+          
+                </div>
+              </div> <!-- end container -->
+            </div>
+        </footer>
+
+        <!-- Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <!-- JavaScript -->
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-storage.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+        <script src="js/script.js"></script>
+        <script>
+          firebase.auth().onAuthStateChanged(function(user){
+            if(user)
+            {
+              window.location.href = "registered.html";
+            }
+          });
+        </script>
+        <script>
+          var menu_status = "false";
+          document.getElementById("drop-menu").style.display = "none";
+          function myFunction(x) {
+              x.classList.toggle("change");
+              if(menu_status.trim() === "true".trim()){
+                  document.getElementById("drop-menu").style.display = "none";
+                  menu_status = "false";
+              }
+              else{
+                  document.getElementById("drop-menu").style.display = "block";
+                  menu_status = "true";
+              }
+          }
+        </script>
+	   <script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+document.getElementById("defaultOpen").click();
+</script>
+	<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+	</script>
+	<script type="text/javascript">
+    function ShowHideofferDiv() {
+        var offer = document.getElementById("offer");
+        var offerspe = document.getElementById("offerspe");
+        offerspe.style.display = offer.value == "Y" ? "block" : "none";
+    }
+</script>
+	<script type="text/javascript">
+    function ShowHidediscountDiv() {
+        var discount = document.getElementById("discount");
+        var discountspe = document.getElementById("discountspe");
+        discountspe.style.display = discount.value == "Y" ? "block" : "none";
+    }
+</script>
+    </body>
+</html>
